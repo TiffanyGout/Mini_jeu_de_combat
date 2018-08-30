@@ -74,50 +74,50 @@ class Personnage
      
     public function id()
     {
-        return $this->_id;
+        return $this->id;
     }
      
     public function nom()
     {
-        return $this->_nom;
+        return $this->nom;
     }
      
     public function degats()
     {
-        return $this->_degats;
+        return $this->degats;
     }
      
     public function experience(){
-        return $this->_experience;
+        return $this->experience;
     }
      
     public function niveau()
     {
-        return $this->_niveau;
+        return $this->niveau;
     }
      
     public function nbCoups()
     {
-        return $this->_nbCoups;
+        return $this->nbCoups;
     }
      
     public function dateDernierCoup()
     {
-        return $this->_dateDernierCoup;
+        return $this->dateDernierCoup;
     }
      
     public function setId($id)
     {
         $id = (int) $id;
         if ($id >= 0) {
-            $this->_id = $id;
+            $this->id = $id;
         }
     }
      
     public function setNom($nom)
     {
         if (is_string($nom)) {
-            $this->_nom = $nom;
+            $this->nom = $nom;
         }
     }
      
@@ -125,7 +125,7 @@ class Personnage
     {
         $degats = (int) $degats;
         if ($degats >= 0 && $degats <= 100) {
-            $this->_degats = $degats;
+            $this->degats = $degats;
         }
     }
      
@@ -133,7 +133,7 @@ class Personnage
     {
         $experience = (int) $experience;
         if ($experience >= 0 && $experience <= 100) {
-            $this->_experience = $experience;
+            $this->experience = $experience;
         }
     }
      
@@ -141,7 +141,7 @@ class Personnage
     {
         $niveau = (int) $niveau;
         if ($niveau >= 0 && $niveau <= 100) {
-            $this->_niveau = $niveau;
+            $this->niveau = $niveau;
         }
     }
      
@@ -149,18 +149,18 @@ class Personnage
     {
         $nbCoups = (int) $nbCoups;
         if ($nbCoups >= 0 && $nbCoups <= 100) {
-            $this->_nbCoups = $nbCoups;
+            $this->nbCoups = $nbCoups;
         }
     }
      
     public function setDateDernierCoup($dateDernierCoup)
     {
         $dateDernierCoup = DateTime::createFromFormat("Y-m-d", $dateDernierCoup);
-        $this->_dateDernierCoup = $dateDernierCoup;
+        $this->dateDernierCoup = $dateDernierCoup;
     }
      
     public function nomValide()
     {
-        return !(empty($this->_nom));
+        return !(empty($this->nom));
     }
 }
